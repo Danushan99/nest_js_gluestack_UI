@@ -1,73 +1,16 @@
-
+'use client';
 import { AddIcon, AlertDialog, AlertDialogBackdrop, AlertDialogBody, AlertDialogCloseButton, AlertDialogContent, AlertDialogFooter, AlertDialogHeader, Box, Button, ButtonGroup, ButtonIcon, ButtonText, Center, CloseIcon, HStack, Heading, Icon, Text } from "@gluestack-ui/themed";
+
 import Image from "next/image";
 import React from "react";
-import ExampleButton from "./components/newbtn";
 
 
-export default function Home() {
-  return (
-
-    <main>
-
-      <Container />
-
-
-    </main>
-  );
-}
-
-
-
-
-const Container = () => {
-  return (
-    <Box flex={1} bg="$black" $web-h={"100vh"}>
-      <Box
-        position="absolute"
-        $base-h={500}
-        $base-w={500}
-        $lg-w={700}
-        $lg-h={700}
-      >
-        <Image src="/gradient.svg" alt="Gradient" fill priority />
-      </Box>
-      <Box
-        flex={1}
-        $base-my={"$16"}
-        $base-mx={"$5"}
-        $lg-my={"$24"}
-        $lg-mx={"$32"}
-        alignItems="center"
-      >
-       
-        
-
-      <ExampleButton/>
-        </Box>
-        <Box
-          flex={1}
-          justifyContent="center"
-          alignItems="center"
-          $base-h={20}
-          $base-w={300}
-          $lg-h={160}
-          $lg-w={400}
-        ></Box>
-   
-        <Box flexDirection="column" $md-flexDirection="row"></Box>
-      </Box>
-
-  );
-};
-
-
-function Example(){
-  const [showAlertDialog, setShowAlertDialog] = React.useState(false);
+const ExampleButton = () => {
+    const [showAlertDialog, setShowAlertDialog] = React.useState(false);
   return (
     <Center h={300}>
       <Button onPress={() => setShowAlertDialog(true)}>
-        <ButtonText>Click me</ButtonText>
+        <ButtonText>Deactivate </ButtonText>
       </Button>
       <AlertDialog
         isOpen={showAlertDialog}
@@ -115,3 +58,5 @@ function Example(){
     </Center>
   );
 }
+
+export default ExampleButton
